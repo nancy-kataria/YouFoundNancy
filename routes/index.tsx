@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <div class="main-body">
       <Welcome />
-      <Fact />
     </div>
   );
 }
