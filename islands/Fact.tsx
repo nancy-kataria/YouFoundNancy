@@ -27,12 +27,15 @@ function Fact({ openFact }: islandProps) {
 
     if (openFact) {
       typingEffect();
+      let element = document.getElementsByClassName("main-body");
+      element[0].classList.add("bg-blur");
+      console.log(element)
     }
   }, []);
 
   return (
     <div class="modal">
-      <h4>What do I google the most?</h4>
+      <h4 id="modal-heading">What do I google the most?</h4>
       <p id="typing-fact"></p>
     </div>
   );
