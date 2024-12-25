@@ -6,6 +6,7 @@
 body {
   background-color: #0f0f23;
   color: #009900;
+  position: relative;
 }
 
 p:hover {
@@ -23,15 +24,23 @@ p:hover {
 }
 
 .main-body {
-  position: relative;
+  
 }
 
 .modal {
   position: absolute;
-  top: 500px;
-  left: 500px;
+  top: 800%;
+  left: 40%;
+  background: #000;
+  border: 3px solid #009900;
+  padding: 20px;
+}
+
+#typing-fact, #modal-heading{
+  color: #00cc00;
+  padding: 5px 0;
 }
 
 .bg-blur {
-  backdrop-filter: blur(20);
+  backdrop-filter: blur(10px);
 }
