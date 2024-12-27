@@ -19,13 +19,35 @@ function AboutMe() {
     const addingChild = (index: number) => {
       let element = document.getElementById("banner");
       let childElement = document.createElement("pre");
-      childElement.id=`name-${index}`
+      childElement.id = `name-${index}`;
 
-      element?.appendChild(childElement)
+      element?.appendChild(childElement);
+    };
+
+    for (let index = 0; index < name.length; index++) {
+      addingChild(index);
     }
 
-    for(let index=0; index<name.length;index++){
-      addingChild(index)
+    const typingEffect = (text: string, position: number) => {
+      let index = 0;
+      const speed = 20;
+
+      const element = document.getElementById(`name-${position}`);
+      if (!element) return;
+
+      const typeCharacter = () => {
+        if (index < text.length) {
+          element.textContent += text.charAt(index);
+          index += 1;
+          setTimeout(typeCharacter, speed);
+        }
+      };
+
+      typeCharacter();
+    };
+
+    for (let index = 0; index < name.length; index++) {
+      typingEffect(name[index], index);
     }
   }, []);
 
