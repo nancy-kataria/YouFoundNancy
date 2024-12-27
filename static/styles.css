@@ -44,3 +44,12 @@ p:hover {
 .bg-blur {
   backdrop-filter: blur(10px);
 }
+
+#banner{
+  display: block;
+  unicode-bidi: isolate;
+  color: #009900;
+  /* font-size: calc(1vw + 7px); */
+  line-height: normal;
+  text-shadow: 0 0 10px #00cc00;
+}
