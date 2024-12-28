@@ -53,3 +53,11 @@ p:hover {
   line-height: normal;
   text-shadow: 0 0 10px #00cc00;
 }
+
+.loading-block{
+  display: flex;
+}
+
+#loading-bar{
+  padding-right: 10px;
+}
