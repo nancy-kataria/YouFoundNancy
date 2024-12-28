@@ -8,7 +8,7 @@ export default function Welcome() {
   useEffect(() => {
     setTimeout(() => {
       setOpenLoading(false);
-    }, 2300);
+    }, 3000);
   }, []);
 
   return (
