@@ -15,7 +15,7 @@ function Loading() {
     // const d = new Date();
     // let day = weekday[d.getDay()];
 
-    const textArray = ["Hello World!"// `Happy ${day}`
+    const textArray = ["Hello World!" // `Happy ${day}`
     ];
 
     const typingEffect = (text: string, position: number) => {
@@ -41,9 +41,11 @@ function Loading() {
     //   typingEffect(textArray[1], 1);
     // }, 1000);
 
+    // Rendering the loading bars
     setTimeout(() => {
       const character = "🁢";
       let count = 0;
+      // Maximum 20 bars
       const maxCount = 20;
       let percent = 0;
 
@@ -52,11 +54,16 @@ function Loading() {
 
       if (lineElement) {
         lineElement.textContent += "Loading: ";
+
+        // In interval of 0.02 seconds, every loading bar is rendered
         const interval = setInterval(() => {
           if (count >= maxCount) {
+            // clear the interval when count goes above 20
             clearInterval(interval);
           } else {
             lineElement.textContent += character;
+
+            // Incrementing the percent by 5 to complete the loading in 20 bars
             percent += 5;
             if (percentElement) {
               percentElement.textContent = `${percent} %`;

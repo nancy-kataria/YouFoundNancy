@@ -6,9 +6,10 @@ export default function Welcome() {
   const [openLoading, setOpenLoading] = useState<boolean>(true);
 
   useEffect(() => {
+    // After 2 seconds the loading block will disappear
     setTimeout(() => {
       setOpenLoading(false);
-    }, 3000);
+    }, 2000);
   }, []);
 
   return (
