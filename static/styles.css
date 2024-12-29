@@ -9,6 +9,10 @@ body {
   position: relative;
 }
 
+.main-body{
+  height: 100vh;
+}
+
 p:hover {
   color: #00cc00;
 }
@@ -23,14 +27,11 @@ p:hover {
   height: 100vh;
 }
 
-.main-body {
-  
-}
-
 .modal {
   position: absolute;
-  top: 800%;
-  left: 40%;
+  top: 300px;
+  left: 37%;
+  width: 300px;
   background: #000;
   border: 3px solid #009900;
   padding: 20px;
@@ -46,8 +47,8 @@ p:hover {
 }
 
 #banner{
-  display: block;
-  unicode-bidi: isolate;
+  /* display: block;
+  unicode-bidi: isolate; */
   color: #009900;
   /* font-size: calc(1vw + 7px); */
   line-height: normal;
