@@ -15,7 +15,7 @@ function Loading() {
     // const d = new Date();
     // let day = weekday[d.getDay()];
 
-    const textArray = ["Hello World!" // `Happy ${day}`
+    const textArray = ["Hello, World!" // `Happy ${day}`
     ];
 
     const typingEffect = (text: string, position: number) => {
@@ -77,7 +77,7 @@ function Loading() {
 
   return (
     <div class="modal">
-      <h3 id="typing-0"></h3>
+      <h2 id="typing-0"></h2>
       <p id="typing-1"></p>
       <div class="loading-block">
         <p id="loading-bar"></p>
