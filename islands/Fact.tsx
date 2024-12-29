@@ -35,7 +35,7 @@ function Fact({ openFact }: islandProps) {
 
   return (
     <div class="modal">
-      <h4 id="modal-heading">What do I google the most?</h4>
+      <h4 id="modal-heading">My most googled question</h4>
       <p id="typing-fact"></p>
     </div>
   );
