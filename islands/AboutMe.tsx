@@ -55,8 +55,12 @@ function AboutMe() {
     <div>
       <div id="banner">
       </div>
-      <p onClick={() => setOpenFact(true)}>[Interesting fact]</p>
-      {openFact && <Fact openFact={openFact} />}
+      <div class="links-container">
+        <p>[LinkedIn]</p>
+        <p>[Github]</p>
+        <p onClick={() => setOpenFact(true)}>[Interesting fact]</p>
+        {openFact && <Fact openFact={openFact} />}
+      </div>
     </div>
   );
 }
