@@ -69,8 +69,10 @@ function AboutMe() {
       <div id="banner">
       </div>
       <div class="links-container">
-        <p>[LinkedIn]</p>
-        <p>[Github]</p>
+        <a href="https://www.linkedin.com/in/nancy-kataria8/" target="_blank">
+          [LinkedIn]
+        </a>
+        <a href="https://github.com/nancy-kataria" target="_blank">[Github]</a>
         <p onClick={() => setOpenFact(true)}>[Interesting fact]</p>
         {openFact && <Fact openFact={openFact} />}
       </div>
