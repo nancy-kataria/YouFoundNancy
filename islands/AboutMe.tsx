@@ -56,6 +56,16 @@ function AboutMe() {
 
   return (
     <div>
+      <iframe
+        src="https://giphy.com/embed/il49eQumsbadTznOH7"
+        width="125"
+        height="125"
+        style=""
+        frameBorder="0"
+        class="giphy-embed"
+        allowFullScreen
+      >
+      </iframe>
       <div id="banner">
       </div>
       <div class="links-container">
