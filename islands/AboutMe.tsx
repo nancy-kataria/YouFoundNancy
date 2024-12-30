@@ -1,5 +1,6 @@
 import { useEffect, useState } from "https://esm.sh/v128/preact@10.22.0/hooks";
 import Fact from "./Fact.tsx";
+import Commands from "./Commands.tsx";
 
 function AboutMe() {
   const [openFact, setOpenFact] = useState<boolean>(false);
@@ -51,8 +52,6 @@ function AboutMe() {
     for (let index = 0; index < name.length; index++) {
       typingEffect(name[index], index);
     }
-
-    // setTimeout(()=> {typingEffect(description)}, 2000)
   }, []);
 
   return (
@@ -65,6 +64,7 @@ function AboutMe() {
         <p onClick={() => setOpenFact(true)}>[Interesting fact]</p>
         {openFact && <Fact openFact={openFact} />}
       </div>
+      <Commands />
     </div>
   );
 }
