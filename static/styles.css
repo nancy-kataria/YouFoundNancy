@@ -4,6 +4,7 @@
 }
 
 body {
+  font-family: monospace;
   background-color: #0f0f23;
   color: #009900;
   position: relative;
@@ -61,4 +62,18 @@ p:hover {
 
 #loading-bar{
   padding-right: 10px;
+}
+
+.links-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.command-input{
+  background: none;
+  outline: none;
+  border: none;
+  color: #009900;
 }
