@@ -55,7 +55,7 @@ function Commands() {
       <pre><span>dev</span>         find me on dev.to</pre>
       <pre><span>clear</span>       clear terminal</pre>
       <div id="prompt-line">
-        <label>visitor@youfoundnancy.com:~$ &nbsp;</label>
+        <label>visitor@youfoundnancy.com:~$</label>
         <input
           type="text"
           class="command-input"

@@ -77,6 +77,7 @@ p:hover {
   outline: none;
   border: none;
   color: #009900;
+  padding-left: 5px;
 }
 
 .description-block{
@@ -104,5 +105,4 @@ a{
 a:hover, #fact:hover{
   color: #00cc00;
   cursor: pointer;
-  
 }
