@@ -16,8 +16,12 @@ function AboutMe() {
     "                        |___/                                     ",
   ];
 
-  const description =
-    "A full stack web developer and a graduate student pursuing a Master's in Computer Science at CSUF. I work with MERN stack and have recently expanded my skill set by learning Confluent Kafka to build real-time, event-driven applications.";
+  const description = [
+    "Full Stack Web Developer",
+    "Graduate student pursuing a Master's in Computer Science at CSUF.",
+    "Works with MERN stack",
+    "Likes to build real-time, event-driven applications.",
+  ];
 
   const addingChild = (index: number) => {
     let element = document.getElementById("banner");
@@ -67,6 +71,13 @@ function AboutMe() {
       >
       </iframe>
       <div id="banner">
+      </div>
+      <div class="description-block">
+        {description.map((point)=>(
+          <div class="github-lines">
+            <p>+ {point}</p>
+          </div>
+        ))}
       </div>
       <div class="links-container">
         <a href="https://www.linkedin.com/in/nancy-kataria8/" target="_blank">
