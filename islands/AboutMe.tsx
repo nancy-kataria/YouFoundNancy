@@ -17,9 +17,9 @@ function AboutMe() {
   ];
 
   const description = [
-    "Full Stack Web Developer",
+    "Full Stack Web Developer.",
     "Graduate student pursuing a Master's in Computer Science at CSUF.",
-    "Works with MERN stack",
+    "Works with MERN stack.",
     "Likes to build real-time, event-driven applications.",
   ];
 
