@@ -41,7 +41,7 @@ function Commands() {
       default:
         generateResponse(
           "p",
-          `${pretext} Please choose from the list of commands`,
+          `${pretext} Command not found`,
         );
     }
   };
