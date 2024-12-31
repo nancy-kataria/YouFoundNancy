@@ -49,11 +49,11 @@ function Commands() {
   return (
     <div id="command-block">
       <p>Type a command to know more</p>
-      <pre>projects    view coding projects</pre>
-      <pre>skills      view the list of skills</pre>
-      <pre>status      find what I am currently working on</pre>
-      <pre>dev         find me on dev.to</pre>
-      <pre>clear       clear terminal</pre>
+      <pre><span>projects</span>    view coding projects</pre>
+      <pre><span>skills</span>      view the list of skills</pre>
+      <pre><span>status</span>      find what I am currently working on</pre>
+      <pre><span>dev</span>         find me on dev.to</pre>
+      <pre><span>clear</span>       clear terminal</pre>
       <div id="prompt-line">
         <label>visitor@youfoundnancy.com:~$ &nbsp;</label>
         <input

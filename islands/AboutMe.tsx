@@ -59,7 +59,7 @@ function AboutMe() {
   }, []);
 
   return (
-    <div>
+    <div class="about-me">
       <iframe
         src="https://giphy.com/embed/il49eQumsbadTznOH7"
         width="125"
@@ -84,7 +84,7 @@ function AboutMe() {
           [LinkedIn]
         </a>
         <a href="https://github.com/nancy-kataria" target="_blank">[Github]</a>
-        <p onClick={() => setOpenFact(true)}>[Interesting fact]</p>
+        <p id="fact" onClick={() => setOpenFact(true)}>[Interesting fact]</p>
         {openFact && <Fact openFact={openFact} />}
       </div>
       <Commands />
