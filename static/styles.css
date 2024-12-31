@@ -50,7 +50,7 @@ p:hover {
 #banner{
   /* display: block;
   unicode-bidi: isolate; */
-  color: #009900;
+  color: #00cc00;
   /* font-size: calc(1vw + 7px); */
   line-height: normal;
   text-shadow: 0 0 10px #00cc00;
@@ -58,6 +58,7 @@ p:hover {
 
 .loading-block{
   display: flex;
+  color: #00cc00;
 }
 
 #loading-bar{
@@ -90,4 +91,18 @@ p:hover {
 
 .github-lines p{
   color: #AFF5B4;
+}
+
+a{
+  color: #009900;
+}
+
+#fact{
+  text-decoration: underline;
+}
+
+a:hover, #fact:hover{
+  color: #00cc00;
+  cursor: pointer;
+  
 }
