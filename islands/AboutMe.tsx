@@ -73,7 +73,7 @@ function AboutMe() {
       <div id="banner">
       </div>
       <div class="description-block">
-        {description.map((point)=>(
+        {description.map((point) => (
           <div class="github-lines">
             <p>+ {point}</p>
           </div>
@@ -87,6 +87,10 @@ function AboutMe() {
         <p id="fact" onClick={() => setOpenFact(true)}>[Interesting fact]</p>
         {openFact && <Fact openFact={openFact} />}
       </div>
+      <p id="email">
+        Feel free to reach out via{" "}
+        <a href="mailto:katarianancy8@gmail.com">email</a>
+      </p>
       <Commands />
     </div>
   );
