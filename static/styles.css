@@ -18,9 +18,9 @@ h2{
   color: #00cc00;
 }
 
-p:hover {
+/* p:hover {
   color: #00cc00;
-}
+} */
 
 .flex-center {
   display: flex;
@@ -69,11 +69,20 @@ p:hover {
   padding-right: 10px;
 }
 
+#email{
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
 .links-container{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 10px;
+}
+
+#command-block{
+  width: 35vw;
 }
 
 .command-input{
@@ -84,10 +93,15 @@ p:hover {
   padding-left: 5px;
 }
 
+#prompt-line input{
+  width: 275px;
+}
+
 .description-block{
   background-color: #033A16;
   padding: 2px;
   margin: 10px 0;
+  width: fit-content;
 }
 
 .github-lines{
