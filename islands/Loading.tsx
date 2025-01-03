@@ -50,7 +50,7 @@ function Loading() {
           }
           count++;
         }
-      }, 20);
+      }, 40);
     }
   };
 
