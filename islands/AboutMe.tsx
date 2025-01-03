@@ -84,8 +84,9 @@ function AboutMe() {
           [LinkedIn]
         </a>
         <a href="https://github.com/nancy-kataria" target="_blank">[Github]</a>
-        <p id="fact" onClick={() => setOpenFact(true)}>[Interesting fact]</p>
-        {openFact && <Fact openFact={openFact} />}
+        <a href="https://docs.google.com/document/d/1X7-3Ma1Uc8-uVQ4g6wJdS1EH3D68jA2qIUGsfAibMIQ/edit?usp=sharing" target="_blank">[Resume]</a>
+        {/* <p id="fact" onClick={() => setOpenFact(true)}>[Interesting fact]</p> */}
+        {/* {openFact && <Fact openFact={openFact} />} */}
       </div>
       <p id="email">
         Feel free to reach out via{" "}
