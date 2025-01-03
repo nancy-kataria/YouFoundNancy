@@ -9,7 +9,7 @@ export default function Welcome() {
     // After 2 seconds the loading block will disappear
     setTimeout(() => {
       setOpenLoading(false);
-    }, 2000);
+    }, 2200);
   }, []);
 
   return (
