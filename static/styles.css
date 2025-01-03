@@ -18,10 +18,6 @@ h2{
   color: #00cc00;
 }
 
-/* p:hover {
-  color: #00cc00;
-} */
-
 .flex-center {
   display: flex;
   justify-content: center;
@@ -97,6 +93,10 @@ h2{
   width: 275px;
 }
 
+.prompt-response{
+  color: #cccccc;
+}
+
 .description-block{
   background-color: #033A16;
   padding: 2px;
@@ -123,4 +123,10 @@ a{
 a:hover, #fact:hover{
   color: #00cc00;
   cursor: pointer;
+}
+
+.repo-links{
+  color: #cccccc;
+  margin-left: 15px;
+  padding-bottom: 10px;
 }
