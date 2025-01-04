@@ -6,14 +6,25 @@ function AboutMe() {
   const [openFact, setOpenFact] = useState<boolean>(false);
 
   const name = [
-    " _   _                          _   __      _             _       ",
-    "| \\ | |                        | | / /     | |           (_)",
-    "|  \\| | __ _ _ __   ___ _   _  | |/ /  __ _| |_ __ _ _ __ _  __ _ ",
-    "| . ` |/ _` | '_ \\ / __| | | | |    \\ / _` | __/ _` | '__| |/ _` |",
-    "| |\\  | (_| | | | | (__| |_| | | |\\  \\ (_| | || (_| | |  | | (_| |",
-    "\\_| \\_/\\__,_|_| |_|\\___|\\__, | \\_| \\_/\\__,_|\\__\\__,_|_|  |_|\\__,_|",
-    "                         __/ |                                    ",
-    "                        |___/                                     ",
+    " _   _                          ",
+    "| \\ | |                        ",
+    "|  \\| | __ _ _ __   ___ _   _  ",
+    "| . ` |/ _` | '_ \\ / __| | | | ",
+    "| |\\  | (_| | | | | (__| |_| | ",
+    "\\_| \\_/\\__,_|_| |_|\\___|\\__, |",
+    "                         __/ |",
+    "                        |___/",
+  ];
+
+  const lastName = [
+    " _   __      _             _       ",
+    "| | / /     | |           (_)",
+    "| |/ /  __ _| |_ __ _ _ __ _  __ _ ",
+    "|    \\ / _` | __/ _` | '__| |/ _` |",
+    "| |\\  \\ (_| | || (_| | |  | | (_| |",
+    "\\_| \\_/\\__,_|\\__\\__,_|_|  |_|\\__,_|",
+    "                                  ",
+    "                                ",
   ];
 
   const description = [
@@ -23,24 +34,24 @@ function AboutMe() {
     "Likes to build real-time, event-driven applications.",
   ];
 
-  const addingChild = (index: number) => {
-    let element = document.getElementById("banner");
+  const addingChild = (index: number, parentEl: string, childEl: string) => {
+    let element = document.getElementById(`banner-${parentEl}`);
     let childElement = document.createElement("pre");
-    childElement.id = `name-${index}`;
+    childElement.id = `${childEl}-${index}`;
 
     element?.appendChild(childElement);
   };
 
-  const typingEffect = (text: string, position: number) => {
+  const typingEffect = (text: string, position: number, element: string) => {
     let index = 0;
     const speed = 20;
 
-    const element = document.getElementById(`name-${position}`);
-    if (!element) return;
+    const firstElement = document.getElementById(`${element}-${position}`);
+    if (!firstElement) return;
 
     const typeCharacter = () => {
       if (index < text.length) {
-        element.textContent += text.charAt(index);
+        firstElement.textContent += text.charAt(index);
         index += 1;
         setTimeout(typeCharacter, speed);
       }
@@ -51,26 +62,27 @@ function AboutMe() {
 
   useEffect(() => {
     for (let index = 0; index < name.length; index++) {
-      addingChild(index);
+      addingChild(index, `first-name`, `first-name`);
     }
     for (let index = 0; index < name.length; index++) {
-      typingEffect(name[index], index);
+      addingChild(index, `last-name`, `last-name`);
     }
+    for (let index = 0; index < name.length; index++) {
+      typingEffect(name[index], index, "first-name");
+    }
+    setTimeout(()=>{
+      for (let index = 0; index < name.length; index++) {
+        typingEffect(lastName[index], index, "last-name");
+      }
+    }, 1000)
   }, []);
 
   return (
     <div class="about-me">
-      <iframe
-        src="https://giphy.com/embed/il49eQumsbadTznOH7"
-        width="125"
-        height="125"
-        style=""
-        frameBorder="0"
-        class="giphy-embed"
-        allowFullScreen
-      >
-      </iframe>
+      <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbm0xYmZlZHVncmh5dWkyeHdxb3V5ZXVlc29pMGpjY2c0cnY1dWc0OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/il49eQumsbadTznOH7/giphy.webp" />
       <div id="banner">
+        <div id="banner-first-name"></div>
+        <div id="banner-last-name"></div>
       </div>
       <div class="description-block">
         {description.map((point) => (
@@ -84,7 +96,12 @@ function AboutMe() {
           [LinkedIn]
         </a>
         <a href="https://github.com/nancy-kataria" target="_blank">[Github]</a>
-        <a href="https://docs.google.com/document/d/1X7-3Ma1Uc8-uVQ4g6wJdS1EH3D68jA2qIUGsfAibMIQ/edit?usp=sharing" target="_blank">[Resume]</a>
+        <a
+          href="https://docs.google.com/document/d/1X7-3Ma1Uc8-uVQ4g6wJdS1EH3D68jA2qIUGsfAibMIQ/edit?usp=sharing"
+          target="_blank"
+        >
+          [Resume]
+        </a>
         {/* <p id="fact" onClick={() => setOpenFact(true)}>[Interesting fact]</p> */}
         {/* {openFact && <Fact openFact={openFact} />} */}
       </div>

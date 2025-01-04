@@ -13,7 +13,7 @@ export default function Welcome() {
   }, []);
 
   return (
-    <div>
+    <div class="main-block">
       {!openLoading && <AboutMe />}
       {openLoading && <Loading />}
     </div>
