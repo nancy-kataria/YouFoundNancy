@@ -1,7 +1,6 @@
 # Portfolio Website  
 
-Welcome to my portfolio website, a unique blend of creativity and functionality inspired by **fake hacking websites**, **Pranx**, **GitHub**, a quote by John Nunemaker, and **the Advent of Code**! This project showcases my skills, projects, and experiences as a full-stack developer, presented in a playful yet professional design.
-  
+Welcome to my portfolio website, a unique blend of creativity and functionality inspired by **fake hacking websites**, **Pranx**, **GitHub**, a quote by John Nunemaker, and **the Advent of Code**! This project showcases my skills, projects, and experiences as a full-stack developer, presented in a playful yet professional design. This is my first project using Deno and Fresh, marking an exciting learning milestone in my development journey. This project uses technologies and tools recommended by [@EthanThatOneKid](https://github.com/EthanThatOneKid).
 
 ## 🛠️ Built With
 
