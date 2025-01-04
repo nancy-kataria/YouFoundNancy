@@ -70,16 +70,18 @@ function AboutMe() {
     for (let index = 0; index < name.length; index++) {
       typingEffect(name[index], index, "first-name");
     }
-    setTimeout(()=>{
+    setTimeout(() => {
       for (let index = 0; index < name.length; index++) {
         typingEffect(lastName[index], index, "last-name");
       }
-    }, 1000)
+    }, 1000);
   }, []);
 
   return (
     <div class="about-me">
-      <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbm0xYmZlZHVncmh5dWkyeHdxb3V5ZXVlc29pMGpjY2c0cnY1dWc0OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/il49eQumsbadTznOH7/giphy.webp" />
+      <div class="img-container">
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbm0xYmZlZHVncmh5dWkyeHdxb3V5ZXVlc29pMGpjY2c0cnY1dWc0OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/il49eQumsbadTznOH7/giphy.webp" />
+      </div>
       <div id="banner">
         <div id="banner-first-name"></div>
         <div id="banner-last-name"></div>
