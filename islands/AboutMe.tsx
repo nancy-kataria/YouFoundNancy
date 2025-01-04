@@ -61,15 +61,21 @@ function AboutMe() {
   };
 
   useEffect(() => {
+
+    // Adding Elements to the DOM
     for (let index = 0; index < name.length; index++) {
       addingChild(index, `first-name`, `first-name`);
     }
     for (let index = 0; index < name.length; index++) {
       addingChild(index, `last-name`, `last-name`);
     }
+
+    // Rendering type flow
     for (let index = 0; index < name.length; index++) {
       typingEffect(name[index], index, "first-name");
     }
+
+    // Last name rendered after 1 sec
     setTimeout(() => {
       for (let index = 0; index < name.length; index++) {
         typingEffect(lastName[index], index, "last-name");
