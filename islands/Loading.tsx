@@ -30,10 +30,11 @@ function Loading() {
     let percent = 0;
 
     const lineElement = document.getElementById(`loading-bar`);
+    const lineText = document.getElementById(`loading-text`);
     const percentElement = document.getElementById(`percentage`);
 
-    if (lineElement) {
-      lineElement.textContent += "Loading: ";
+    if (lineElement && lineText) {
+      lineText.textContent += "Loading: ";
 
       // In interval of 0.02 seconds, every loading bar is rendered
       const interval = setInterval(() => {
@@ -55,23 +56,7 @@ function Loading() {
   };
 
   useEffect(() => {
-    // Calculating Weekday
-    // const weekday = [
-    //   "Sunday",
-    //   "Monday",
-    //   "Tuesday",
-    //   "Wednesday",
-    //   "Thursday",
-    //   "Friday",
-    //   "Saturday",
-    // ];
-    // const d = new Date();
-    // let day = weekday[d.getDay()];
-
     typingEffect(textArray[0], 0);
-    // setTimeout(() => {
-    //   typingEffect(textArray[1], 1);
-    // }, 1000);
 
     // Rendering the loading bars
     setTimeout(() => {
@@ -84,8 +69,11 @@ function Loading() {
       <h2 id="typing-0"></h2>
       <p id="typing-1"></p>
       <div class="loading-block">
+        <p id="loading-text"></p>
         <p id="loading-bar"></p>
-        <p id="percentage"></p>
+        <div>
+          <p id="percentage"></p>
+        </div>
       </div>
     </div>
   );
