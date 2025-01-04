@@ -8,6 +8,10 @@ Welcome to my portfolio website, a unique blend of creativity and functionality 
 - **Frontend**: [Deno Fresh](https://fresh.deno.dev/) 
 - **Deployment**: Deno Deploy  
 
+## 🌐 Live Demo  
+
+Check out the live version of my portfolio [here](https://youfoundnancy.com/). 
+
 ## Fresh Project
 
 Your new Fresh project is ready to go. You can follow the Fresh "Getting
