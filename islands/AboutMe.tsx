@@ -31,7 +31,7 @@ function AboutMe() {
     "Full Stack Web Developer.",
     "Graduate student pursuing a Master's in Computer Science at CSUF.",
     "Works with MERN stack.",
-    "Likes to build real-time, event-driven applications.",
+    "Likes to build end-to-end web applications.",
   ];
 
   const addingChild = (index: number, parentEl: string, childEl: string) => {
