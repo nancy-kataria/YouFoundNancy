@@ -136,3 +136,17 @@ export function Status() {
   childElement.className = "prompt-response clear";
   childElement.textContent = `Currently learning about Machine Learning`;
 }
+
+export function Error(){
+    const element = document.getElementById("command-block");
+
+  // create an element
+  const childElement = document.createElement("p");
+  // add the element to the DOM
+  element?.appendChild(childElement);
+
+  // Assign id, classname and text
+  childElement.id = `error`;
+  childElement.className = "prompt-response clear";
+  childElement.textContent = `Command not found`;
+}
