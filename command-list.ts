@@ -63,6 +63,22 @@ export function TellmeMore(){
 `;
 }
 
-export function Projects(){
-    
+// export function Projects(){
+
+// }
+
+export function DevLink(){
+    const element = document.getElementById("command-block");
+
+    // create an element
+    const childElement = document.createElement("a");
+    // add the element to the DOM
+    element?.appendChild(childElement);
+
+    // Assign id, classname and text
+    childElement.id = `dev`;
+    childElement.className = "prompt-response clear";
+    childElement.href = 'https://dev.to/nancy_kataria'
+    childElement.target = "_blank"
+    childElement.textContent = `[Dev.to/nancy_kataria]`;
 }

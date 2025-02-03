@@ -1,4 +1,4 @@
-import {Skills, TellmeMore} from "../command-list.ts";
+import { DevLink, Skills, TellmeMore } from "../command-list.ts";
 
 function Commands() {
   const pretext = "visitor@youfoundnancy.com:~$";
@@ -54,7 +54,6 @@ function Commands() {
     }
     return;
   };
-  
 
   const promptResponse = (prompt: string) => {
     // The commands should not be case sensitive
@@ -72,26 +71,14 @@ function Commands() {
 
     switch (prompt) {
       case "skills":
-        Skills()
+        Skills();
         break;
 
       case "dev":
-        generateResponse(
-          `
-  https://dev.to/nancy_kataria
-          `,
-          prompt,
-        );
+        DevLink();
         break;
 
       case "status":
-        generateResponse(
-          ` 
-  Currently learning about Machine Learning and making applications using 
-  Microservices.
-          `,
-          prompt,
-        );
         break;
 
       case "projects":
@@ -115,7 +102,7 @@ function Commands() {
         break;
 
       case "tell me more":
-        TellmeMore()
+        TellmeMore();
         break;
 
       case "clear":
