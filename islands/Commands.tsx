@@ -1,3 +1,5 @@
+import Skills from "../command-list.ts";
+
 function Commands() {
   const pretext = "visitor@youfoundnancy.com:~$";
 
@@ -18,26 +20,26 @@ function Commands() {
     element?.appendChild(childElement);
 
     // Assign id, classname and text
-    childElement.id = `${id}`;
-    childElement.className = "prompt-response clear";
-    childElement.textContent = text;
+    // childElement.id = `${id}`;
+    // childElement.className = "prompt-response clear";
+    // childElement.textContent = text;
 
-    if (id == "projects") {
-      const projects = ["Tixly", "Auction Bidding"];
-      const links = [
-        "https://github.com/nancy-kataria/Tixly",
-        "https://github.com/nancy-kataria/Auction-Bidding",
-      ];
-      for (let i = 0; i < projects.length; i++) {
-        let link = document.createElement("a");
-        element?.appendChild(link);
+    // if (id == "projects") {
+    //   const projects = ["Tixly", "Auction Bidding"];
+    //   const links = [
+    //     "https://github.com/nancy-kataria/Tixly",
+    //     "https://github.com/nancy-kataria/Auction-Bidding",
+    //   ];
+    //   for (let i = 0; i < projects.length; i++) {
+    //     let link = document.createElement("a");
+    //     element?.appendChild(link);
 
-        link.textContent = `[${projects[i]}]`;
-        link.className = "repo-links clear";
-        link.href = links[i];
-        link.target = "_blank";
-      }
-    }
+    //     link.textContent = `[${projects[i]}]`;
+    //     link.className = "repo-links clear";
+    //     link.href = links[i];
+    //     link.target = "_blank";
+    //   }
+    // }
 
     // add the input element after the response
     let re_render_element = document.getElementById("prompt-line");
@@ -52,19 +54,25 @@ function Commands() {
     }
     return;
   };
+  
 
   const promptResponse = (prompt: string) => {
     // The commands should not be case sensitive
     prompt = prompt.toLocaleLowerCase();
 
+    let element = document.getElementById("command-block");
+
+    // Adding the command prompt before the response
+
+    let commandPromptElement = document.createElement("p");
+    // add the element to the DOM
+    element?.appendChild(commandPromptElement);
+    commandPromptElement.className = "secondary-command-prompt clear";
+    commandPromptElement.textContent = pretext;
+
     switch (prompt) {
       case "skills":
-        generateResponse(
-          `
-  [HTML, CSS, JavaScript, TypeScript, React, Python]
-          `,
-          prompt,
-        );
+        Skills()
         break;
 
       case "dev":
@@ -159,6 +167,10 @@ function Commands() {
           prompt,
         );
     }
+
+    // add the input element after the response
+    let re_render_element = document.getElementById("prompt-line");
+    element?.appendChild(re_render_element);
   };
 
   return (
