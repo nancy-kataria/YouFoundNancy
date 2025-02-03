@@ -1,29 +1,30 @@
-export function Skills(){
-    const element = document.getElementById("command-block");
+export function Skills() {
+  const element = document.getElementById("command-block");
 
-    // create an element
-    const childElement = document.createElement("p");
-    // add the element to the DOM
-    element?.appendChild(childElement);
+  // create an element
+  const childElement = document.createElement("p");
+  // add the element to the DOM
+  element?.appendChild(childElement);
 
-    // Assign id, classname and text
-    childElement.id = `skills`;
-    childElement.className = "prompt-response clear";
-    childElement.textContent = `[HTML, CSS, JavaScript, TypeScript, React, Python]`;
+  // Assign id, classname and text
+  childElement.id = `skills`;
+  childElement.className = "prompt-response clear";
+  childElement.textContent =
+    `[HTML, CSS, JavaScript, TypeScript, React, Python]`;
 }
 
-export function TellmeMore(){
-    const element = document.getElementById("command-block");
+export function TellmeMore() {
+  const element = document.getElementById("command-block");
 
-    // create an element
-    const childElement = document.createElement("pre");
-    // add the element to the DOM
-    element?.appendChild(childElement);
+  // create an element
+  const childElement = document.createElement("pre");
+  // add the element to the DOM
+  element?.appendChild(childElement);
 
-    // Assign id, classname and text
-    childElement.id = `tell-me-more`;
-    childElement.className = "prompt-response clear";
-    childElement.textContent = `
+  // Assign id, classname and text
+  childElement.id = `tell-me-more`;
+  childElement.className = "prompt-response clear";
+  childElement.textContent = `
   .-----------------------------------------------------------------------------.
   ||Es| |F1 |F2 |F3 |F4 |F5 | |F6 |F7 |F8 |F9 |F10|                  C= AMIGA   |
   ||__| |___|___|___|___|___| |___|___|___|___|___|                             |
@@ -63,36 +64,75 @@ export function TellmeMore(){
 `;
 }
 
-// export function Projects(){
+export function Projects() {
+  const element = document.getElementById("command-block");
 
-// }
+  const projects = ["Tixly", "Auction Bidding"];
+  const links = [
+    "https://github.com/nancy-kataria/Tixly",
+    "https://github.com/nancy-kataria/Auction-Bidding",
+  ];
 
-export function DevLink(){
-    const element = document.getElementById("command-block");
+  const description = [
+    ` Tixly is inspired by Ticketmaster, a popular platform 
+                    for buying and selling event tickets. Tixly is a smaller 
+                    version that works well, showing how features like 
+                    managing events, secure payments, and live ticket updates 
+                    can be done.`,
+    `A live streaming project that uses kafka to stream bidding 
+                    data and is based on an auction where people bid for a
+                    product. It is an end-to-end pipeline where a web application
+                    takes input from the end user and the submissions are stored 
+                    latest insights on that data.`,
+  ];
 
-    // create an element
-    const childElement = document.createElement("a");
-    // add the element to the DOM
-    element?.appendChild(childElement);
+  for (let i = 0; i < projects.length; i++) {
+    const divElement = document.createElement("div");
 
-    // Assign id, classname and text
-    childElement.id = `dev`;
-    childElement.className = "prompt-response clear";
-    childElement.href = 'https://dev.to/nancy_kataria'
-    childElement.target = "_blank"
-    childElement.textContent = `[Dev.to/nancy_kataria]`;
+    divElement.id = `project-${i}`;
+    divElement.className = "project-div prompt-response clear";
+    element?.appendChild(divElement);
+
+    const divChildElement1 = document.createElement("a");
+    const divChildElement2 = document.createElement("p");
+
+    divChildElement1.textContent = `[${projects[i]}]`;
+    divChildElement1.href = `${links[i]}`;
+    divChildElement1.target = "_blank";
+
+    divChildElement2.textContent = `${description[i]}`;
+
+    divElement.appendChild(divChildElement1);
+    divElement.appendChild(divChildElement2);
+  }
 }
 
-export function Status(){
-    const element = document.getElementById("command-block");
+export function DevLink() {
+  const element = document.getElementById("command-block");
 
-    // create an element
-    const childElement = document.createElement("p");
-    // add the element to the DOM
-    element?.appendChild(childElement);
+  // create an element
+  const childElement = document.createElement("a");
+  // add the element to the DOM
+  element?.appendChild(childElement);
 
-    // Assign id, classname and text
-    childElement.id = `status`;
-    childElement.className = "prompt-response clear";
-    childElement.textContent = `Currently learning about Machine Learning`;
+  // Assign id, classname and text
+  childElement.id = `dev`;
+  childElement.className = "prompt-response clear";
+  childElement.href = "https://dev.to/nancy_kataria";
+  childElement.target = "_blank";
+  childElement.textContent = `[Dev.to/nancy_kataria]`;
+}
+
+export function Status() {
+  const element = document.getElementById("command-block");
+
+  // create an element
+  const childElement = document.createElement("p");
+  // add the element to the DOM
+  element?.appendChild(childElement);
+
+  // Assign id, classname and text
+  childElement.id = `status`;
+  childElement.className = "prompt-response clear";
+  childElement.textContent = `Currently learning about Machine Learning`;
 }

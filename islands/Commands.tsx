@@ -1,4 +1,10 @@
-import { DevLink, Skills, Status, TellmeMore } from "../command-list.ts";
+import {
+  DevLink,
+  Projects,
+  Skills,
+  Status,
+  TellmeMore,
+} from "../command-list.ts";
 
 function Commands() {
   const pretext = "visitor@youfoundnancy.com:~$";
@@ -79,27 +85,11 @@ function Commands() {
         break;
 
       case "status":
-        Status()
+        Status();
         break;
 
       case "projects":
-        generateResponse(
-          `
-  Tixly             Tixly is inspired by Ticketmaster, a popular platform 
-                    for buying and selling event tickets. Tixly is a smaller 
-                    version that works well, showing how features like 
-                    managing events, secure payments, and live ticket updates 
-                    can be done.
-
-  Auction Bidding   A live streaming project that uses kafka to stream bidding 
-                    data and is based on an auction where people bid for a
-                    product. It is an end-to-end pipeline where a web application
-                    takes input from the end user and the submissions are stored 
-                    latest insights on that data.
-  
-  Visit Github Repos:`,
-          prompt,
-        );
+        Projects();
         break;
 
       case "tell me more":
