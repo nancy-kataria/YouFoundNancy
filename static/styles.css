@@ -103,6 +103,11 @@ h2 {
 
 .prompt-response {
   color: #cccccc;
+  padding: 10px 0;
+}
+
+.prompt-response p {
+  width: 100%;
 }
 
 .description-block {
@@ -139,6 +144,10 @@ a:hover,
   margin-left: 15px;
   padding-bottom: 10px;
 }
+
+/* .project-div{
+  padding: 10px 0;
+} */
 
 @media only screen and (max-width: 400px) {
   img {
@@ -184,8 +193,25 @@ a:hover,
   }
 }
 
+@media only screen and (max-width: 768px) {
+  #secondary-ascii {
+    display: block;
+  }
+
+  #tell-me-more {
+    display: none;
+  }
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  #secondary-ascii {
+    display: none;
+  }
+
+  #tell-me-more {
+    display: block;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

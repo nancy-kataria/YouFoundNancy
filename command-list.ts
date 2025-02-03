@@ -41,27 +41,38 @@ export function TellmeMore() {
   |   |___|___|_______________________|___|___|      |__|V_|__|  |_____|__|e_|  |
   \\                                                                             /
    -----------------------------------------------------------------------------
+`;
 
-  I'm so glad that you would like to know more about me. 
+  const secondaryChildElement = document.createElement("pre");
 
-
-  I am a small-town girl who discovered the world of coding back in ninth grade. 
-  My teacher sparked my love for it by assigning weekly coding challenges, and 
-  I still remember the thrill of printing my first “Hello, World!” in Java. 
-  Later, my brother became my mentor, guiding me as I honed my skills. What truly 
-  fascinated me was how even the simplest websites I created could connect with 
-  people across the globe through the internet —---- it felt like magic!
-
-
-  I continued my learning journey by joining an NGO, where I worked under 
-  experienced engineers who challenged me and helped me grow. After that, 
-  I interned at a health tech company, contributing to digitizing cancer 
-  health records. Collaborating with the biomedicine team taught me the 
-  value of teamwork and sharpened my problem-solving skills. In 2023, 
-  I graduated and in 2024, I took the exciting leap of moving to the 
-  United States to pursue my master’s degree.
+  secondaryChildElement.textContent = `
+.--.
+|__|   .-------.
+|=.|   |.-----.|
+|--|   || KCK ||
+|  |   |'-----'|
+|__| ~ ')_____('
 
 `;
+
+  secondaryChildElement.className = "prompt-response clear";
+  secondaryChildElement.id = "secondary-ascii";
+
+  element?.appendChild(secondaryChildElement);
+
+  const aboutTexts = [
+    "I'm so glad that you would like to know more about me.",
+    "I am a small-town girl who discovered the world of coding back in ninth grade. My teacher sparked my love for it by assigning weekly coding challenges, and I still remember the thrill of printing my first “Hello, World!” in Java. Later, my brother became my mentor, guiding me as I honed my skills. What truly fascinated me was how even the simplest websites I created could connect with people across the globe through the internet —---- it felt like magic!",
+    "I continued my learning journey by joining an NGO, where I worked under experienced engineers who challenged me and helped me grow. After that, I interned at a health tech company, contributing to digitizing cancer health records. Collaborating with the biomedicine team taught me the value of teamwork and sharpened my problem-solving skills. In 2023, I graduated and in 2024, I took the exciting leap of moving to the United States to pursue my master’s degree.",
+  ];
+
+  for (let i = 0; i < aboutTexts.length; i++) {
+    const aboutElement = document.createElement("p");
+    aboutElement.className = "prompt-response clear";
+    aboutElement.textContent = `${aboutTexts[i]}`;
+
+    element?.appendChild(aboutElement);
+  }
 }
 
 export function Projects() {
@@ -137,8 +148,8 @@ export function Status() {
   childElement.textContent = `Currently learning about Machine Learning`;
 }
 
-export function Error(){
-    const element = document.getElementById("command-block");
+export function Error() {
+  const element = document.getElementById("command-block");
 
   // create an element
   const childElement = document.createElement("p");
