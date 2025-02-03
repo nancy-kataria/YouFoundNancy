@@ -68,7 +68,7 @@ export function TellmeMore() {
 
   for (let i = 0; i < aboutTexts.length; i++) {
     const aboutElement = document.createElement("p");
-    aboutElement.className = "prompt-response clear";
+    aboutElement.className = "more-div prompt-response clear";
     aboutElement.textContent = `${aboutTexts[i]}`;
 
     element?.appendChild(aboutElement);
