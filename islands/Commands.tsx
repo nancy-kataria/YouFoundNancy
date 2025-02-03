@@ -1,5 +1,6 @@
 import {
   DevLink,
+  Error,
   Projects,
   Skills,
   Status,
@@ -8,49 +9,6 @@ import {
 
 function Commands() {
   const pretext = "visitor@youfoundnancy.com:~$";
-
-  const generateResponse = (text: string, id: string) => {
-    let element = document.getElementById("command-block");
-
-    // Adding the command prompt before the response
-
-    let commandPromptElement = document.createElement("p");
-    // add the element to the DOM
-    element?.appendChild(commandPromptElement);
-    commandPromptElement.className = "secondary-command-prompt clear";
-    commandPromptElement.textContent = pretext;
-
-    // create an element
-    let childElement = document.createElement("pre");
-    // add the element to the DOM
-    element?.appendChild(childElement);
-
-    // Assign id, classname and text
-    // childElement.id = `${id}`;
-    // childElement.className = "prompt-response clear";
-    // childElement.textContent = text;
-
-    // if (id == "projects") {
-    //   const projects = ["Tixly", "Auction Bidding"];
-    //   const links = [
-    //     "https://github.com/nancy-kataria/Tixly",
-    //     "https://github.com/nancy-kataria/Auction-Bidding",
-    //   ];
-    //   for (let i = 0; i < projects.length; i++) {
-    //     let link = document.createElement("a");
-    //     element?.appendChild(link);
-
-    //     link.textContent = `[${projects[i]}]`;
-    //     link.className = "repo-links clear";
-    //     link.href = links[i];
-    //     link.target = "_blank";
-    //   }
-    // }
-
-    // add the input element after the response
-    let re_render_element = document.getElementById("prompt-line");
-    element?.appendChild(re_render_element);
-  };
 
   const clearTerminal = () => {
     let elements = document.getElementsByClassName("clear");
@@ -101,10 +59,7 @@ function Commands() {
         break;
 
       default:
-        generateResponse(
-          `Command not found`,
-          prompt,
-        );
+        Error();
     }
 
     // add the input element after the response
