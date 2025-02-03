@@ -1,9 +1,9 @@
-import { useEffect, useState } from "https://esm.sh/v128/preact@10.22.0/hooks";
-import Fact from "./Fact.tsx";
+import { useEffect} from "https://esm.sh/v128/preact@10.22.0/hooks";
+// import Fact from "./Fact.tsx";
 import Commands from "./Commands.tsx";
 
 function AboutMe() {
-  const [openFact, setOpenFact] = useState<boolean>(false);
+  // const [openFact, setOpenFact] = useState<boolean>(false);
 
   const name = [
     " _   _                          ",
@@ -35,8 +35,8 @@ function AboutMe() {
   ];
 
   const addingChild = (index: number, parentEl: string, childEl: string) => {
-    let element = document.getElementById(`banner-${parentEl}`);
-    let childElement = document.createElement("pre");
+    const element = document.getElementById(`banner-${parentEl}`);
+    const childElement = document.createElement("pre");
     childElement.id = `${childEl}-${index}`;
 
     element?.appendChild(childElement);
