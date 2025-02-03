@@ -82,3 +82,17 @@ export function DevLink(){
     childElement.target = "_blank"
     childElement.textContent = `[Dev.to/nancy_kataria]`;
 }
+
+export function Status(){
+    const element = document.getElementById("command-block");
+
+    // create an element
+    const childElement = document.createElement("p");
+    // add the element to the DOM
+    element?.appendChild(childElement);
+
+    // Assign id, classname and text
+    childElement.id = `status`;
+    childElement.className = "prompt-response clear";
+    childElement.textContent = `Currently learning about Machine Learning`;
+}

@@ -1,4 +1,4 @@
-import { DevLink, Skills, TellmeMore } from "../command-list.ts";
+import { DevLink, Skills, Status, TellmeMore } from "../command-list.ts";
 
 function Commands() {
   const pretext = "visitor@youfoundnancy.com:~$";
@@ -79,6 +79,7 @@ function Commands() {
         break;
 
       case "status":
+        Status()
         break;
 
       case "projects":
