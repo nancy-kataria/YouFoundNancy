@@ -11,7 +11,7 @@ function Commands() {
   const pretext = "visitor@youfoundnancy.com:~$";
 
   const clearTerminal = () => {
-    let elements = document.getElementsByClassName("clear");
+    const elements = document.getElementsByClassName("clear");
 
     while (elements.length > 0) {
       elements[0]?.parentNode?.removeChild(elements[0]);
@@ -23,11 +23,11 @@ function Commands() {
     // The commands should not be case sensitive
     prompt = prompt.toLocaleLowerCase();
 
-    let element = document.getElementById("command-block");
+    const element = document.getElementById("command-block");
 
     // Adding the command prompt before the response
 
-    let commandPromptElement = document.createElement("p");
+    const commandPromptElement = document.createElement("p");
     // add the element to the DOM
     element?.appendChild(commandPromptElement);
     commandPromptElement.className = "secondary-command-prompt clear";
@@ -63,8 +63,10 @@ function Commands() {
     }
 
     // add the input element after the response
-    let re_render_element = document.getElementById("prompt-line");
-    element?.appendChild(re_render_element);
+    const re_render_element = document.getElementById("prompt-line");
+    if (re_render_element) {
+      element?.appendChild(re_render_element);
+    }
   };
 
   return (
