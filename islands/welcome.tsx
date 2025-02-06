@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "https://esm.sh/v128/preact@10.22.0/hooks";
 import Loading from "./Loading.tsx";
 import AboutMe from "./AboutMe.tsx";
