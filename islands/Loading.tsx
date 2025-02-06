@@ -1,4 +1,4 @@
-import { useEffect } from "https://esm.sh/v128/preact@10.22.0/hooks";
+import { useEffect } from "preact/hooks";
 
 function Loading() {
   const textArray = ["Hello, World!" // `Happy ${day}`

@@ -1,4 +1,4 @@
-import { useEffect} from "https://esm.sh/v128/preact@10.22.0/hooks";
+import { useEffect} from "preact/hooks";
 // import Fact from "./Fact.tsx";
 import Commands from "./Commands.tsx";
 
@@ -117,7 +117,7 @@ function AboutMe() {
         Feel free to reach out via{" "}
         <a href="mailto:katarianancy8@gmail.com">email</a>
       </p>
-      {/* <Commands /> */}
+      <Commands />
     </div>
   );
 }
