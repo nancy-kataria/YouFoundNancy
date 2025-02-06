@@ -117,7 +117,7 @@ function AboutMe() {
         Feel free to reach out via{" "}
         <a href="mailto:katarianancy8@gmail.com">email</a>
       </p>
-      <Commands />
+      {/* <Commands /> */}
     </div>
   );
 }
