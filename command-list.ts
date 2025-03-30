@@ -17,7 +17,7 @@ function CreateElement<K extends keyof HTMLElementTagNameMap>(
 ): HTMLElementTagNameMap[K] {
   // K is a generic type variable
   // keyof HTMLElementTagNameMap is a union of all valid HTML tag names
-  // K extends keyof HTMLElementTagNameMap means: "K can only be one of the valid HTML 
+  // K extends keyof HTMLElementTagNameMap means: "K can only be one of the valid HTML
   // tag names defined in HTMLElementTagNameMap."
   // This function will return the specific HTML element type that matches the tag name you give it.
   const element = document.getElementById("command-block");
@@ -40,12 +40,21 @@ function CreateElement<K extends keyof HTMLElementTagNameMap>(
 }
 
 export function Skills() {
-  CreateElement("p", {
-    id: "skills",
-    className: clearClassName,
-    textContent:
-      "Languages: [JavaScript, TypeScript, Python, HTML, CSS, Go, SQL]",
-  });
+  const skillSet = [
+    "Languages: [JavaScript, TypeScript, Python, HTML, CSS, SQL]",
+    "Frontend: [ReactJS, NextJS, Fresh JS]",
+    "Backend: [NodeJS, ExpressJS, Deno]",
+    "Databases: [MongoDb, MySQL]",
+    "Distributed Systems: [Confluent Kafka]",
+    "Developer Tools: [Postman, Git, Github]"
+  ];
+  for (let i = 0; i < skillSet.length; i++) {
+    CreateElement("p", {
+      id: `skills-${i}`,
+      className: clearClassName,
+      textContent: skillSet[i],
+    });
+  }
 }
 
 export function TellmeMore() {
