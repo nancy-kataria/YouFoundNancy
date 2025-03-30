@@ -1,5 +1,11 @@
 const clearClassName = "prompt-response clear";
 
+/**
+ * Function to create, add properties and add child to DOM
+ * @param tag - string
+ * @param options - object of strings
+ * @returns - element created
+ */
 function CreateElement<K extends keyof HTMLElementTagNameMap>(
   tag: K,
   options: {
@@ -7,8 +13,13 @@ function CreateElement<K extends keyof HTMLElementTagNameMap>(
     className?: string;
     textContent?: string;
     href?: string;
-  } = {},
+  } = {}, // default, {} instead of being undefined
 ): HTMLElementTagNameMap[K] {
+  // K is a generic type variable
+  // keyof HTMLElementTagNameMap is a union of all valid HTML tag names
+  // K extends keyof HTMLElementTagNameMap means: "K can only be one of the valid HTML 
+  // tag names defined in HTMLElementTagNameMap."
+  // This function will return the specific HTML element type that matches the tag name you give it.
   const element = document.getElementById("command-block");
   // Creating element
   const el = document.createElement(tag);
