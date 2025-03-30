@@ -1,3 +1,5 @@
+const clearClassName = "prompt-response clear";
+
 function CreateElement<K extends keyof HTMLElementTagNameMap>(
   tag: K,
   options: {
@@ -8,7 +10,10 @@ function CreateElement<K extends keyof HTMLElementTagNameMap>(
   } = {},
 ): HTMLElementTagNameMap[K] {
   const element = document.getElementById("command-block");
+  // Creating element
   const el = document.createElement(tag);
+
+  // Assigning properties
 
   if (options.id) el.id = options.id;
   if (options.className) el.className = options.className;
@@ -18,6 +23,7 @@ function CreateElement<K extends keyof HTMLElementTagNameMap>(
     (el as HTMLAnchorElement).target = "_blank";
   }
 
+  // Adding child to DOM
   element?.appendChild(el);
   return el;
 }
@@ -25,24 +31,17 @@ function CreateElement<K extends keyof HTMLElementTagNameMap>(
 export function Skills() {
   CreateElement("p", {
     id: "skills",
-    className: "prompt-response clear",
+    className: clearClassName,
     textContent:
       "Languages: [JavaScript, TypeScript, Python, HTML, CSS, Go, SQL]",
   });
 }
 
 export function TellmeMore() {
-  const element = document.getElementById("command-block");
-
-  // create an element
-  const childElement = document.createElement("pre");
-  // add the element to the DOM
-  element?.appendChild(childElement);
-
-  // Assign id, classname and text
-  childElement.id = `tell-me-more`;
-  childElement.className = "prompt-response clear";
-  childElement.textContent = `
+  CreateElement("pre", {
+    id: `tell-me-more`,
+    className: clearClassName,
+    textContent: `
 .-----------------------------------------------------------------------------.
 ||Es| |F1 |F2 |F3 |F4 |F5 | |F6 |F7 |F8 |F9 |F10|                  C= AMIGA   |
 ||__| |___|___|___|___|___| |___|___|___|___|___|                             |
@@ -59,11 +58,12 @@ export function TellmeMore() {
 |   |___|___|_______________________|___|___|      |__|V_|__|  |_____|__|e_|  |
 \\                                                                             /
  -----------------------------------------------------------------------------
-`;
+`,
+  });
 
   CreateElement("pre", {
     id: "secondary-ascii",
-    className: "prompt-response clear",
+    className: clearClassName,
     textContent: `
 .--.
 |__|   .-------.
@@ -134,45 +134,26 @@ export function Projects() {
 }
 
 export function DevLink() {
-  const element = document.getElementById("command-block");
-
-  // create an element
-  const childElement = document.createElement("a");
-  // add the element to the DOM
-  element?.appendChild(childElement);
-
-  // Assign id, classname and text
-  childElement.id = `dev`;
-  childElement.className = "prompt-response clear";
-  childElement.href = "https://dev.to/nancy_kataria";
-  childElement.target = "_blank";
-  childElement.textContent = `[Dev.to/nancy_kataria]`;
+  CreateElement("a", {
+    id: `dev`,
+    className: clearClassName,
+    textContent: `[Dev.to/nancy_kataria]`,
+    href: "https://dev.to/nancy_kataria",
+  });
 }
 
 export function Status() {
-  const element = document.getElementById("command-block");
-
-  // create an element
-  const childElement = document.createElement("p");
-  // add the element to the DOM
-  element?.appendChild(childElement);
-
-  // Assign id, classname and text
-  childElement.id = `status`;
-  childElement.className = "prompt-response clear";
-  childElement.textContent = `Currently learning about Machine Learning`;
+  CreateElement("p", {
+    id: `status`,
+    className: clearClassName,
+    textContent: `Currently exploring Machine Learning`,
+  });
 }
 
 export function Error() {
-  const element = document.getElementById("command-block");
-
-  // create an element
-  const childElement = document.createElement("p");
-  // add the element to the DOM
-  element?.appendChild(childElement);
-
-  // Assign id, classname and text
-  childElement.id = `error`;
-  childElement.className = "prompt-response clear";
-  childElement.textContent = `Command not found`;
+  CreateElement("p", {
+    id: `error`,
+    className: clearClassName,
+    textContent: `Command not found`,
+  });
 }
