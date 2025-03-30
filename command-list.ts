@@ -1,56 +1,34 @@
-type CommandName = "skills" | "tell me more" | "projects" | "dev" | "status"
-abstract class Command{
-  protected element: HTMLElement | null;
-  constructor(){
-    this.element = document.getElementById("command-block");
+function CreateElement<K extends keyof HTMLElementTagNameMap>(
+  tag: K,
+  options: {
+    id?: string;
+    className?: string;
+    textContent?: string;
+    href?: string;
+  } = {},
+): HTMLElementTagNameMap[K] {
+  const element = document.getElementById("command-block");
+  const el = document.createElement(tag);
+
+  if (options.id) el.id = options.id;
+  if (options.className) el.className = options.className;
+  if (options.textContent) el.textContent = options.textContent;
+  if (tag === "a" && options.href) {
+    (el as HTMLAnchorElement).href = options.href;
+    (el as HTMLAnchorElement).target = "_blank";
   }
 
-  // Creating an HTML element (like a div, p, a, etc.) and applying optional attributes (id, className, textContent, and href)
-  // then adding it to the page
-
-  // HTMLElementTagNameMap is a built-in TypeScript type that maps 
-  // tag names ('a', 'p', 'div', etc.) to their corresponding DOM types (HTMLAnchorElement, HTMLParagraphElement, etc.).
-  protected createElement<K extends keyof HTMLElementTagNameMap>(
-    tag: K,
-    options: {
-      id?: string;
-      className?: string;
-      textContent?: string;
-      href?: string;
-    } = {}
-  ): HTMLElementTagNameMap[K] {
-
-    // create an element
-    const el = document.createElement(tag);
-
-    // Assign properties
-    if (options.id) el.id = options.id;
-    if (options.className) el.className = options.className;
-    if (options.textContent) el.textContent = options.textContent;
-    if (tag === "a" && options.href) {
-      (el as HTMLAnchorElement).href = options.href;
-      (el as HTMLAnchorElement).target = "_blank";
-    }
-
-    // add the element to the DOM
-    this.element?.appendChild(el);
-    return el;
-  }
+  element?.appendChild(el);
+  return el;
 }
 
 export function Skills() {
-  const element = document.getElementById("command-block");
-
-  // create an element
-  const childElement = document.createElement("p");
-  // add the element to the DOM
-  element?.appendChild(childElement);
-
-  // Assign id, classname and text
-  childElement.id = `skills`;
-  childElement.className = "prompt-response clear";
-  childElement.textContent =
-    `[HTML, CSS, JavaScript, TypeScript, React, Python]`;
+  CreateElement("p", {
+    id: "skills",
+    className: "prompt-response clear",
+    textContent:
+      "Languages: [JavaScript, TypeScript, Python, HTML, CSS, Go, SQL]",
+  });
 }
 
 export function TellmeMore() {
@@ -83,9 +61,10 @@ export function TellmeMore() {
  -----------------------------------------------------------------------------
 `;
 
-  const secondaryChildElement = document.createElement("pre");
-
-  secondaryChildElement.textContent = `
+  CreateElement("pre", {
+    id: "secondary-ascii",
+    className: "prompt-response clear",
+    textContent: `
 .--.
 |__|   .-------.
 |=.|   |.-----.|
@@ -93,12 +72,8 @@ export function TellmeMore() {
 |  |   |'-----'|
 |__| ~ ')_____('
 
-`;
-
-  secondaryChildElement.className = "prompt-response clear";
-  secondaryChildElement.id = "secondary-ascii";
-
-  element?.appendChild(secondaryChildElement);
+`,
+  });
 
   const aboutTexts = [
     "I'm so glad that you would like to know more about me.",
@@ -107,11 +82,11 @@ export function TellmeMore() {
   ];
 
   for (let i = 0; i < aboutTexts.length; i++) {
-    const aboutElement = document.createElement("p");
-    aboutElement.className = "more-div prompt-response clear";
-    aboutElement.textContent = `${aboutTexts[i]}`;
-
-    element?.appendChild(aboutElement);
+    CreateElement("p", {
+      id: "text-para",
+      className: "more-div prompt-response clear",
+      textContent: `${aboutTexts[i]}`,
+    });
   }
 }
 
