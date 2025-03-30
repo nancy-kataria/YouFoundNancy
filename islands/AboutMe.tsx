@@ -105,7 +105,7 @@ function AboutMe() {
         </a>
         <a href="https://github.com/nancy-kataria" target="_blank">[Github]</a>
         <a
-          href="https://drive.google.com/file/d/1ComyW8kVIZMWD4aNuoItX5anPiuhbU5O/view?usp=sharing"
+          href="https://drive.google.com/file/d/1ECLnIA3xrGVDBnsrLhlNN6OXyLZQ0LcT/view?usp=sharing"
           target="_blank"
         >
           [Resume]
