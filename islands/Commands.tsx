@@ -7,144 +7,6 @@ import {
   TellmeMore,
 } from "../command-list.ts";
 
-type CommandName = "skills" | "tellmemore" | "dev" | "status" | "errorCommand";
-// abstract class Command {
-//   protected element: HTMLElement | null;
-//   constructor() {
-//     this.element = document.getElementById("command-block");
-//   }
-
-//   // Creating an HTML element (like a div, p, a, etc.) and applying optional attributes (id, className, textContent, and href)
-//   // then adding it to the page
-
-//   // HTMLElementTagNameMap is a built-in TypeScript type that maps
-//   // tag names ('a', 'p', 'div', etc.) to their corresponding DOM types (HTMLAnchorElement, HTMLParagraphElement, etc.).
-//   protected createElement<K extends keyof HTMLElementTagNameMap>(
-//     tag: K,
-//     options: {
-//       id?: string;
-//       className?: string;
-//       textContent?: string;
-//       href?: string;
-//     } = {},
-//   ): HTMLElementTagNameMap[K] {
-//     // create an element
-//     const el = document.createElement(tag);
-
-//     // Assign properties
-//     if (options.id) el.id = options.id;
-//     if (options.className) el.className = options.className;
-//     if (options.textContent) el.textContent = options.textContent;
-//     if (tag === "a" && options.href) {
-//       (el as HTMLAnchorElement).href = options.href;
-//       (el as HTMLAnchorElement).target = "_blank";
-//     }
-
-//     // add the element to the DOM
-//     this.element?.appendChild(el);
-//     return el;
-//   }
-
-//   // Every command must have an execute() method
-//   abstract execute(): void;
-// }
-
-// class Skills extends Command {
-//   execute() {
-//     this.createElement("p", {
-//       id: "skills",
-//       className: "prompt-response clear",
-//       textContent:
-//         "Languages: [JavaScript, TypeScript, Python, HTML, CSS, Go, SQL]",
-//     });
-//   }
-// }
-
-// class TellMeMore extends Command{
-//   execute(){
-//     this.createElement("pre", {
-//       id: "tell-me-more",
-//       className: "prompt-response clear",
-//       textContent: `
-//   .-----------------------------------------------------------------------------.
-// ||Es| |F1 |F2 |F3 |F4 |F5 | |F6 |F7 |F8 |F9 |F10|                  C= AMIGA   |
-// ||__| |___|___|___|___|___| |___|___|___|___|___|                             |
-// | _____________________________________________      ________   ___________   |
-// ||~  |! |@ |§ |$ |% |& |/ |( |) |= |? | || |<- |    |Del|Help| |{ |} |/ |* |  |
-// ||__|1_|2_|3_|4_|5_|6_|7_|8_|9_|0_|ß_|_| \\|_|__|    |___|____| |[ |]_|__|__|  |
-// ||<-  |Q |W |E |R |T |Z |U |I |O |P |Ü |* |   ||               |7 |8 |9 |- |  |
-// ||->__|__|__|__|__|__|__|__|__|__|__|__|+_|_  ||               |__|__|__|__|  |
-// ||Ctr|oC|A |S |D |F |G |H |J |K |L |Ö |Ä |^ |<'|               |4 |5 |6 |+ |  |
-// ||___|_L|__|__|__|__|__|__|__|__|__|__|__|#_|__|       __      |__|__|__|__|  |
-// ||^    |> |Y |X |C |V |B |N |M |; |: |_ |^     |      |A |     |1 |2 |3 |E |  |
-// ||_____|<_|__|__|__|__|__|__|__|,_|._|-_|______|    __||_|__   |__|__|__|n |  |
-// |   |Alt|A  |                       |A  |Alt|      |<-|| |->|  |0    |. |t |  |
-// |   |___|___|_______________________|___|___|      |__|V_|__|  |_____|__|e_|  |
-// \\                                                                             /
-//  -----------------------------------------------------------------------------
-//       `
-//     })
-
-//     this.createElement("pre", {
-//       id: "secondary-ascii",
-//       className: "prompt-response clear",
-//       textContent: `
-// .--.
-// |__|   .-------.
-// |=.|   |.-----.|
-// |--|   || KCK ||
-// |  |   |'-----'|
-// |__| ~ ')_____('
-// `,
-//     });
-//   }
-// }
-
-// class DevLink extends Command {
-//   execute() {
-//     this.createElement("a", {
-//       id: "dev",
-//       className: "prompt-response clear",
-//       href: "https://dev.to/nancy_kataria",
-//       textContent: `[Dev.to/nancy_kataria]`,
-//     });
-//   }
-// }
-
-// class Status extends Command{
-//   execute(){
-//     this.createElement("p", {
-//       id: 'status',
-//       className: 'prompt-response clear',
-//       textContent: `Currently exploring Machine Learning`
-//     })
-//   }
-// }
-
-// class Error extends Command{
-//   execute(){
-//     this.createElement("p", {
-//       id: "error",
-//       className: "prompt-response clear",
-//       textContent: "Command not found",
-//     });
-//   }
-// }
-
-// const CommandRegistry: Record<CommandName, Command> = {
-//   skills: new Skills(),
-//   dev: new DevLink(),
-//   status: new Status(),
-//   errorCommand: new Error(),
-//   tellmemore: new TellMeMore()
-// };
-
-
-// function runCommand(commandName: string): void {
-//   const command = CommandRegistry[commandName as keyof typeof CommandRegistry] || CommandRegistry.errorCommand;
-//   command.execute();
-// }
-
 function Commands() {
   const pretext = "visitor@youfoundnancy.com:~$";
 
@@ -174,17 +36,14 @@ function Commands() {
     switch (prompt) {
       case "skills":
         Skills()
-        // runCommand("skills")
         break;
 
       case "dev":
         DevLink()
-        // runCommand("dev");
         break;
 
       case "status":
         Status();
-        // runCommand("status")
         break;
 
       case "projects":
@@ -193,7 +52,6 @@ function Commands() {
 
       case "tell me more":
         TellmeMore()
-        // runCommand("tellmemore")
         break;
 
       case "clear":
@@ -201,7 +59,6 @@ function Commands() {
         break;
 
       default:
-        // runCommand("errorCommand");
         Error()
         break;
     }
