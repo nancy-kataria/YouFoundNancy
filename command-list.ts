@@ -46,7 +46,7 @@ export function Skills() {
     "Backend: [NodeJS, ExpressJS, Deno]",
     "Databases: [MongoDb, MySQL]",
     "Distributed Systems: [Confluent Kafka]",
-    "Developer Tools: [Postman, Git, Github]"
+    "Developer Tools: [Postman, Git, Github]",
   ];
   for (let i = 0; i < skillSet.length; i++) {
     CreateElement("p", {
@@ -113,13 +113,17 @@ export function TellmeMore() {
 export function Projects() {
   const element = document.getElementById("command-block");
 
-  const projects = ["Tixly", "Auction Bidding"];
+  const projects = ["Hack Comet", "Tixly", "Auction Bidding"];
   const links = [
+    "https://github.com/nancy-kataria/hack-comet",
     "https://github.com/nancy-kataria/Tixly",
     "https://github.com/nancy-kataria/Auction-Bidding",
   ];
 
   const description = [
+    `A digital contract for your hackathon project. Hack Comet helps hackathon 
+    teams create clear agreements about how they'll work together. Define your 
+    team, set deadlines, establish decision-making rules, and more.`,
     ` Tixly is inspired by Ticketmaster, a popular platform 
                     for buying and selling event tickets. Tixly is a smaller 
                     version that works well, showing how features like 
