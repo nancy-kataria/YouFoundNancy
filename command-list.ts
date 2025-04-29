@@ -47,6 +47,7 @@ export function Skills() {
     "Databases: [MongoDb, MySQL]",
     "Distributed Systems: [Confluent Kafka]",
     "Developer Tools: [Postman, Git, Github]",
+    "Libraries: [Pandas, NumPy, Scikit-Learn]"
   ];
   for (let i = 0; i < skillSet.length; i++) {
     CreateElement("p", {
