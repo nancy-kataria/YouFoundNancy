@@ -113,14 +113,19 @@ export function TellmeMore() {
 export function Projects() {
   const element = document.getElementById("command-block");
 
-  const projects = ["Hack Comet", "Tixly", "Auction Bidding"];
+  const projects = ["NexBuy", "Hack Comet", "Tixly", "Auction Bidding"];
   const links = [
+    "https://github.com/nancy-kataria/NexBuy",
     "https://github.com/nancy-kataria/hack-comet",
     "https://github.com/nancy-kataria/Tixly",
     "https://github.com/nancy-kataria/Auction-Bidding",
   ];
 
   const description = [
+    `A multi strategy product recommendation system that connects the right 
+    products with the right customers using Machine Learning Concepts. It levarages 
+    content-based filtering (TF-IDF + cosine similarity), collaborative filtering, 
+    and hybrid scoring to recommend products to the user using their purachase history`,
     `A digital contract for your hackathon project. Hack Comet helps hackathon 
     teams create clear agreements about how they'll work together. Define your 
     team, set deadlines, establish decision-making rules, and more.`,
