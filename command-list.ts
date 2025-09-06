@@ -41,13 +41,14 @@ function CreateElement<K extends keyof HTMLElementTagNameMap>(
 
 export function Skills() {
   const skillSet = [
-    "Languages: [JavaScript, TypeScript, Python, HTML, CSS, SQL]",
+    "Languages: [JavaScript, TypeScript, Python, HTML, CSS, SQL, Go]",
     "Frontend: [ReactJS, NextJS, Fresh JS]",
     "Backend: [NodeJS, ExpressJS, Deno]",
     "Databases: [MongoDb, MySQL]",
     "Distributed Systems: [Confluent Kafka]",
     "Developer Tools: [Postman, Git, Github]",
-    "Libraries: [Pandas, NumPy, Scikit-Learn]"
+    "Libraries: [Pandas, NumPy, Scikit-Learn]",
+    "Core Competencies: [Data Structures, Problem Solving, Critical Thinking, Cross-Functional Communication]",
   ];
   for (let i = 0; i < skillSet.length; i++) {
     CreateElement("p", {
@@ -98,7 +99,7 @@ export function TellmeMore() {
 
   const aboutTexts = [
     "I'm so glad that you would like to know more about me.",
-    "I am a small-town girl who discovered the world of coding back in ninth grade. My teacher sparked my love for it by assigning weekly coding challenges, and I still remember the thrill of printing my first “Hello, World!” in Java. Later, my brother became my mentor, guiding me as I honed my skills. What truly fascinated me was how even the simplest websites I created could connect with people across the globe through the internet —---- it felt like magic!",
+    "I still remember the thrill of printing my first “Hello, World!” in Java.",
     "I continued my learning journey by joining an NGO, where I worked under experienced engineers who challenged me and helped me grow. After that, I interned at a health tech company, contributing to digitizing cancer health records. Collaborating with the biomedicine team taught me the value of teamwork and sharpened my problem-solving skills. In 2023, I graduated and in 2024, I took the exciting leap of moving to the United States to pursue my master’s degree.",
   ];
 
@@ -114,8 +115,15 @@ export function TellmeMore() {
 export function Projects() {
   const element = document.getElementById("command-block");
 
-  const projects = ["NexBuy", "Hack Comet", "Tixly", "Auction Bidding"];
+  const projects = [
+    "Digital Lawyer",
+    "NexBuy",
+    "Hack Comet",
+    "Tixly",
+    "Auction Bidding",
+  ];
   const links = [
+    "https://github.com/nancy-kataria/Digital-Lawyer",
     "https://github.com/nancy-kataria/NexBuy",
     "https://github.com/nancy-kataria/hack-comet",
     "https://github.com/nancy-kataria/Tixly",
@@ -123,6 +131,10 @@ export function Projects() {
   ];
 
   const description = [
+    `An offline-first AI Legal Assistant designed to provide legal guidance while 
+    protecting your sensitive information. Unlike cloud-based AI services that may 
+    store and analyze your conversations, Digital Lawyer runs entirely on your 
+    device using local AI models.`,
     `A multi strategy product recommendation system that connects the right 
     products with the right customers using Machine Learning Concepts. It levarages 
     content-based filtering (TF-IDF + cosine similarity), collaborative filtering, 
@@ -185,5 +197,14 @@ export function Error() {
     id: `error`,
     className: clearClassName,
     textContent: `Command not found`,
+  });
+}
+
+export function Experience() {
+  CreateElement("p", {
+    id: "exp",
+    className: clearClassName,
+    textContent:
+      `Before I started my Master's Degree in the United States, I was a Software Engineer working for a health-tech company and making end-to-end products.  Please checkout my detailed work experience on my Resume link given under my name and description above.`,
   });
 }

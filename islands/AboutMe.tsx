@@ -28,10 +28,10 @@ function AboutMe() {
   ];
 
   const description = [
-    "Full Stack Web Developer.",
-    "Graduate student pursuing a Master's in Computer Science at CSUF.",
-    "Works with MERN stack.",
-    "Likes to build end-to-end web applications.",
+    "Graduate student pursuing her Master's in Computer Science at Cal State Fullerton.",
+    "Full Stack Developer.",
+    "Builds AI-powered solutions.",
+    "AI/ML enthusiast"
   ];
 
   const addingChild = (index: number, parentEl: string, childEl: string) => {
@@ -105,7 +105,7 @@ function AboutMe() {
         </a>
         <a href="https://github.com/nancy-kataria" target="_blank">[Github]</a>
         <a
-          href="https://drive.google.com/file/d/1-rUsVfQvgXYrJWVzwmfAYLhH5X4G2XQE/view?usp=sharing"
+          href="https://drive.google.com/file/d/1EMArV--0LvDZAGh4rIgiqPxo5jmzp-5P/view?usp=sharing"
           target="_blank"
         >
           [Resume]

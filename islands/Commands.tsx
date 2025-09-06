@@ -1,6 +1,7 @@
 import {
   DevLink,
   Error,
+  Experience,
   Projects,
   Skills,
   Status,
@@ -54,6 +55,10 @@ function Commands() {
         TellmeMore()
         break;
 
+      case "exp":
+        Experience()
+        break;
+
       case "clear":
         clearTerminal();
         break;
@@ -73,12 +78,15 @@ function Commands() {
   return (
     <div id="command-block">
       <p>Type a command to know more</p>
+      <br></br>
       <pre><span>projects</span>      view coding projects</pre>
       <pre><span>skills</span>        view the list of skills</pre>
-      <pre><span>tell me more</span>  know more about Nancy</pre>
-      <pre><span>status</span>        find what I am currently working on</pre>
-      <pre><span>dev</span>           find me on dev.to</pre>
+      {/* <pre><span>tell me more</span>  know more about Nancy</pre> */}
+      {/* <pre><span>status</span>        find what I am currently working on</pre> */}
+      {/* <pre><span>dev</span>           find me on dev.to</pre> */}
+      <pre><span>exp</span>           view previous experience</pre>
       <pre><span>clear</span>         clear terminal</pre>
+      <br></br>
       <div id="prompt-line">
         <label>{pretext}</label>
         <input
